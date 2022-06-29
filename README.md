@@ -15,9 +15,11 @@ Lifecycle Configurations provide a mechanism to customize the Jupyter Server and
 * [install-pip-package-on-kernel](scripts/install-pip-package-on-kernel) - Installs a python package with pip on a Studio Kernel
 * [install-requirements-txt](scripts/install-requirements-txt) - Checks for a requirements.txt file in the user's home directory. If exists, installs all the packages for the user.
 * [remove-local-efs](scripts/remove-local-efs) - Checks for a `.local/lib` folder in the user's home directory on EFS and removes its contents. Attach this script to any KernelGateway app and create an app from the CLI. This resolves any issues with Studio restarts caused due to internal package conflicts.
+* [run-lcc-from-s3](scripts/run-lcc-from-s3) - Downloads a shell script from S3 and runs it. This can be used to dynamically update the startup scripts, since the LCC script itself does not change. Note, the timeout for LCC configuration still holds, the script on S3 cannot run longer than the timeout.
 * [set-git-config](scripts/set-git-config) - This script sets the username and email address in Git config.
 * [set-git-credentials](scripts/set-git-credentials) - Adds the user's git credentials to Secret Manager and configures git to fetch the credentials from there when needed
 * [set-proxy-settings](scripts/set-proxy-settings) - Configures HTTP and HTTPS proxy settings on jupter server and on the Studio kernels.
+
 
 #### Developing LCC Scripts for SageMaker Studio
 
