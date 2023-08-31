@@ -8,6 +8,7 @@ Lifecycle Configurations provide a mechanism to customize the Jupyter Server and
 
 #### Sample Scripts
 
+* [change-default-home](scripts/change-default-home) - Updates the home directory for logged in users to a different directory than home.
 * [git-clone-repo](scripts/git-clone-repo) - Checks out a Git repository under the user's home folder automatedly when the Jupter server starts.
 * [git-clone-with-credentials](scripts/git-clone-with-credentials) - Retrieves git credentials from secrets manager and uses it to clone a git repository in the user's home folder.
 * [install-autoshutdown-server-extension](scripts/install-autoshutdown-server-extension) (Recommended) - Installs only the server part of idle-kernel shutdown extension. No external dependencies to install, recommended to use in VPCOnly mode with restricted Internet connectivity. Idle timelimit has to be set using Life Cycle Configuration script.
